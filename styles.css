@@ -1,0 +1,136 @@
+*,*::before, *::after {
+box-sizing: border-box;
+} 
+
+body{
+
+    background-color: #000000;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+  }
+
+
+.piano{
+display: flex; 
+position: absolute; 
+bottom: 0px; 
+overflow: hidden;
+border-radius: 20px;
+
+}
+
+.visual
+{
+width: 600px;
+height: 1000px; 
+background-color: #000000;
+position: absolute; 
+top: 0px; 
+}
+
+.black {
+    --width: 100px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    height: 340px; 
+    background-color: rgb(0, 0, 0);
+    border: 1px solid #333;
+    border-radius: 10%;
+  }
+
+.white
+{
+width: 200px;
+height: 400px; 
+background-color: white;
+border: 1px solid #333;
+
+}
+.drum{
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.guitar{
+    z-index: 2;
+    position: absolute;
+    top: 1px;
+    left: 1600px;
+    height: 700px;
+    width: auto;
+    
+}
+
+
+@keyframes jump{
+    0%{
+        bottom: 0%;   
+        
+    }
+
+
+    100%{
+        bottom: 100%;
+        
+    }
+}
+
+
+
+
+
+
+
+.visual > div{
+
+    position: absolute;
+    
+    
+
+}
+
+
+.black.active {
+    background-color: #333;
+    box-shadow: 0px 0px 50px rgb(13, 203, 236);
+  }
+
+
+.white.active {
+    
+    box-shadow:inset 0px 0px 150px rgb(13, 203, 236);
+  }
+
+.piano.active{
+    box-shadow: 0px 0px 50px rgb(13, 203, 236);
+    
+}
+
+.guitar.active {
+    
+    box-shadow:inset 0px 0px 150px rgb(13, 203, 236);
+  }
+
+.drum.active{
+    box-shadow: 0px 0px 50px rgb(13, 203, 236);
+    
+}
+
+
+
+
+  
+  
